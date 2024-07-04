@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/caloriePageFragment">
+
+    <fragment
+        android:id="@+id/caloriePageFragment"
+        android:name="com.onurgunes.caloriehandbookretrofitmvvm.CaloriePageFragment"
+        android:label="fragment_calorie_page"
+        tools:layout="@layout/fragment_calorie_page" >
+        <action
+            android:id="@+id/action_caloriePageFragment_to_productCalorieDetailsFragment"
+            app:destination="@id/productCalorieDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productCalorieDetailsFragment"
+        android:name="com.onurgunes.caloriehandbookretrofitmvvm.ProductCalorieDetailsFragment"
+        android:label="fragment_product_calorie_details"
+        tools:layout="@layout/fragment_product_calorie_details" />
+</navigation>
