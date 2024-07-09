@@ -1,6 +1,6 @@
-package com.onurgunes.caloriehandbookretrofitmvvm.View.Service
+package com.onurgunes.caloriehandbookretrofitmvvm.Service
 
-import com.onurgunes.caloriehandbookretrofitmvvm.View.Model.Besin
+import com.onurgunes.caloriehandbookretrofitmvvm.Model.Besin
 import retrofit2.http.GET
 
 interface BesinAPI {
