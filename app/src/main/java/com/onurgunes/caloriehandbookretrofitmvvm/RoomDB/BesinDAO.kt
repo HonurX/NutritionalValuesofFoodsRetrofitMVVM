@@ -11,7 +11,7 @@ interface BesinDAO {
 
 
     @Insert
-    suspend fun insetBesin (vararg  besin: Besin ) : List <Long>
+    suspend fun insertBesin (vararg  besin: Besin ) : List <Long>
 
     @Query ("SELECT * FROM besin")
     suspend fun getAllBesin () : List<Besin>

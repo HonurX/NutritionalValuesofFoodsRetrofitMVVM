@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.onurgunes.caloriehandbookretrofitmvvm.R
-import com.onurgunes.caloriehandbookretrofitmvvm.View.Service.BesinAPI
+import com.onurgunes.caloriehandbookretrofitmvvm.Service.BesinAPI
 import com.onurgunes.caloriehandbookretrofitmvvm.databinding.FragmentNutrientListBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -35,19 +35,6 @@ class NutrientListFragment : Fragment() {
 
         }
 
-        val retrofit = Retrofit.Builder()
-            .baseUrl("https://raw.githubusercontent.com/")
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-            .create(BesinAPI::class.java)
-
-        CoroutineScope(Dispatchers.IO).launch {
-
-             val besinler = retrofit.getBesin()
-            besinler.forEach {
-                println(it.besinIsim)
-            }
-        }
             
     }
 

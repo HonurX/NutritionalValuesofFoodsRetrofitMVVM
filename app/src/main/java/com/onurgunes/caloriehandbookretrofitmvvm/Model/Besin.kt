@@ -27,11 +27,9 @@ data class Besin (
     @SerializedName("gorsel")
     val besinGorsel : String?,
 
-
+  @PrimaryKey(autoGenerate = true)
+  val uuid: Int = 0
 
 )
 
-{
-  @PrimaryKey(autoGenerate = true)
-  val uuid: Int = 0
-}
+
