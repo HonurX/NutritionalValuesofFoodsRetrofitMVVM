@@ -28,7 +28,7 @@ data class Besin (
     val besinGorsel : String?,
 
   @PrimaryKey(autoGenerate = true)
-  val uuid: Int = 0
+  var uuid: Int = 0
 
 )
 
