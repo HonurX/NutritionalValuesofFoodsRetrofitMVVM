@@ -19,8 +19,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
         android:layout_margin="3dp"
         android:layout_weight="2"
         >
@@ -28,7 +28,7 @@
     </ImageView>
 
     <LinearLayout
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="3"
         android:orientation="vertical"
@@ -40,9 +40,10 @@
             android:id="@+id/isim"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{besin.besinIsim}"
+            android:text= "Besin Isim"
             android:textColor="@color/black"
             android:layout_margin="5dp"
+            android:layout_gravity="center"
             android:textSize="21sp"
             android:textStyle="bold"
             >
@@ -53,9 +54,10 @@
             android:id="@+id/kalori"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{besin.besinKalori}"
-            android:textSize="21sp"
-            android:layout_margin="5dp">
+            android:layout_margin="5dp"
+            android:layout_gravity="center"
+            android:text="Besin Kalori"
+            android:textSize="21sp">
 
         </TextView>
     </LinearLayout>

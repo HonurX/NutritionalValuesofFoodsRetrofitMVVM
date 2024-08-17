@@ -1,6 +1,6 @@
-package com.onurgunes.caloriehandbookretrofitmvvm.Model
+package com.onurgunes.caloriehandbookretrofitmvvm.Service
 
-import com.onurgunes.caloriehandbookretrofitmvvm.Service.BesinAPI
+import com.onurgunes.caloriehandbookretrofitmvvm.Model.Besin
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 

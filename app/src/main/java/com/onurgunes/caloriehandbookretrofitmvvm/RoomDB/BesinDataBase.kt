@@ -10,7 +10,7 @@ import kotlin.concurrent.Volatile
 @Database (entities =[ Besin::class], version = 1)
 
  abstract  class BesinDataBase : RoomDatabase() {
-    abstract fun besinDAO( ) : BesinDAO
+    abstract fun besinDAO() : BesinDAO
 
 
 //Singelton
@@ -20,19 +20,18 @@ import kotlin.concurrent.Volatile
 
         @Volatile
         private var instance : BesinDataBase? = null
+
         private val  lock = Any()
 
-        operator  fun invoke (context: Context ) = instance ?: synchronized(lock) {
-            instance ?: databaseOlustur(context).also {
-                instance = it
-
-            }
+        operator fun invoke (context: Context) = instance ?: synchronized(lock) {
+             instance ?: databaseOlustur(context).also {
+                 instance= it
+             }
 
         }
 
-        private fun databaseOlustur(context: Context)  = Room.databaseBuilder(context.applicationContext,
+        private fun databaseOlustur (context: Context) = Room.databaseBuilder(context.applicationContext,
             BesinDataBase::class.java,"besindatabase").build()
-
     }
 
 
